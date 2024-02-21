@@ -30,7 +30,6 @@
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
-        </div>
         <div class="form-group">
           <label for="descricao">Descrição sobre você:</label>
           <textarea
@@ -45,7 +44,8 @@
     </div>
     <script>
       const form = document.querySelector(".form");
-      form.addEventListener("submit", enviarDados);
+      form.addEventListener("submit", enviarDados
+      );
 
       async function enviarDados(event) {
         event.preventDefault();
@@ -67,16 +67,22 @@
 
         try {
           // Faz uma requisição para a sua API
-          await fetch("INSIRA O LINK DA SUA API AQUI", {
+          await fetch("https://meu-primeiro-banco-de-dados-34wc.onrender.com/formulario", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(dados),
+          }).then((response) =>{
+            if(response.ok){
+              alert("Formulário enviado com sucesso!");
+            }else{
+              alert("Erro ao enviar formulário!");
+            }
           });
         } catch (error) {
           console.log(error);
-        }
+        } 
       }
     </script>
   </body>
