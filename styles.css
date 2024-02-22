@@ -1,6 +1,6 @@
 body {
   display: flex;
-  flex-direction: columns;
+  flex-direction: column; /* Corrigido para column */
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -8,11 +8,12 @@ body {
   color: #2d2d2d; /* preto */
   align-items: center;
   justify-content: center;
-  justify-items: center;
 }
 
+/* Restante do seu CSS... */
+
 .container {
-  max-width: 600px;
+  max-width: 400px;
   margin: 50px 20px;
   padding: 40px 40px;
   background-color: #ffffff; /* branco */
@@ -24,8 +25,18 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   margin-bottom: 40px;
+  .buttons {
+    display: flex;
+    list-style-type: none;
+    align-items: end;
+  }
+  .logo_title {
+    align-items: center;
+  }
 }
 
 .logo {
@@ -78,6 +89,19 @@ textarea:focus {
   border-color: rgba(51, 0, 67, 0.2); /* roxo */
 }
 
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 .btn {
   background-color: #330043; /* roxo */
@@ -94,4 +118,59 @@ textarea:focus {
 
 .btn:hover {
   background-color: rgba(51, 0, 67, 0.67); /* tom mais escuro de roxo */
+}
+
+/*CSS da página do formulário*/
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: #ffffff; /* branco */
+  color: #2d2d2d; /* preto */
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #330043; /* roxo */
+  margin: 0;
+}
+
+.formularios {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formulario {
+  margin: 20px 20px;
+  background-color: #ffffff; /* branco */
+  border: 2px solid #330043; /* roxo */
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(51, 0, 67, 0.2);
+}
+
+.formulario h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #330043; /* roxo */
+  margin-top: 0;
+}
+
+.formulario p {
+  font-size: 16px;
+  /* margin-bottom: 10px; */
 }
