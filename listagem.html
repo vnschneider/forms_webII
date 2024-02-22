@@ -45,7 +45,9 @@
   <script>
     const mensagem = document.querySelector(".mensagem");
     //TODO: Altere o link abaixo para o link da sua API
-    fetch("COLE O LINK DA SUA API AQUI/listarFormulario")
+    fetch(
+      "https://meu-primeiro-banco-de-dados-34wc.onrender.com/listarFormulario"
+    )
       .then((response) => response.json())
       .then((data) => {
         const corpoTabela = document.querySelector(".corpo-tabela");
@@ -80,9 +82,12 @@
     async function excluirItem(id) {
       try {
         //TODO: Altere o link abaixo para o link da sua API
-        await fetch(`COLE O LINK DA SUA API AQUI/formulario/${id}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://meu-primeiro-banco-de-dados-34wc.onrender.com/deletarFormulario/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
         alert("Item excluído com sucesso");
         window.location.reload();
       } catch (error) {
