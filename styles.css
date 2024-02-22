@@ -22,10 +22,31 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.container-lista {
+  max-width: auto;
+  margin: 50px 20px;
+  padding: 40px 40px;
+  background-color: #ffffff; /* branco */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(51, 0, 67, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 header {
-  text-align: center;
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 20px;
+}
+
+.buttons {
+  align-items: end;
+  a {
+    text-decoration: none;
+  }
 }
 
 .logo {
@@ -68,8 +89,16 @@ textarea {
   transition: border-color 0.3s ease;
 }
 
+input:focus {
+  outline: rgba(51, 0, 67, 0.2);
+}
+
 textarea {
   resize: vertical;
+}
+
+textarea:focus {
+  outline: rgba(51, 0, 67, 0.2);
 }
 
 input[type="text"]:focus,
@@ -83,6 +112,7 @@ textarea:focus {
   background-color: #330043; /* roxo */
   color: #ffffff; /* branco */
   width: 100%; /* Ocupa toda a largura do container */
+  height: auto;
   padding: 14px;
   border: none;
   border-radius: 8px;
@@ -97,7 +127,6 @@ textarea:focus {
 }
 
 /* Estilização da tabela */
-
 .container {
   margin: 50px 20px;
   padding: 40px 40px;

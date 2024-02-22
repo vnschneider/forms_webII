@@ -14,9 +14,12 @@
   </head>
   <body>
     <main class="container-lista">
+      <div class="buttons">
+        <a href="index.html" class="btn">Voltar</a>
+      </div>
       <header>
         <img src="/assets/logo.png" alt="Logo" class="logo" />
-        <h1 class="heading">Listagem dos dados</h1>
+        <h1 class="heading">Formulário Desenvolvimento WEB II</h1>
       </header>
 
       <div class="container-tabela">
@@ -41,8 +44,8 @@
   </body>
   <script>
     const mensagem = document.querySelector(".mensagem");
-
-    fetch("http://localhost:3000/listarFormulario")
+    //TODO: Altere o link abaixo para o link da sua API
+    fetch("COLE O LINK DA SUA API AQUI/listarFormulario")
       .then((response) => response.json())
       .then((data) => {
         const corpoTabela = document.querySelector(".corpo-tabela");
@@ -76,7 +79,8 @@
 
     async function excluirItem(id) {
       try {
-        await fetch(`http://localhost:3000/formulario/${id}`, {
+        //TODO: Altere o link abaixo para o link da sua API
+        await fetch(`COLE O LINK DA SUA API AQUI/formulario/${id}`, {
           method: "DELETE",
         });
         alert("Item excluído com sucesso");
